@@ -15,7 +15,10 @@ RESTAURACIE = ['http://www.obedovat.sk/bratislava/Restauracia_7172_Beer_Palace',
 RESTAURACIE.each do
   |rest|
   doc = Nokogiri::HTML(open(rest))
-  doc.css('h1.h2homenews01c').each {|e| puts e.content}
-  puts doc.css('.texthelp')[2].content
   puts '#######################################'
+  doc.css('h1.h2homenews01c').each {|e| puts e.content}
+  puts '#######################################'
+  puts doc.css('.texthelp')[2].content
+  puts
+  puts
 end
